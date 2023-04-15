@@ -1,0 +1,17 @@
+module add_bcd_behav (a, b, cin, bcd, cout);
+input [3:0] a, b;
+input cin;
+output [3:0] bcd;
+output cout;
+
+reg [3:0] sum;
+reg [3:0] bcd;
+reg cout3;
+reg cout;
+always @ (a or b)
+begin
+{cout3, sum} = a + b + cin;
+cout = (cout3 || (sum[3] && sum[1]) ||(sum[3] && sum[2]));
+bcd = sum + {1'b0, cout, cout, 1'b0};
+end
+endmodule 

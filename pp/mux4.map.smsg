@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at BCD_adder_subtractor.v(4): object "SUM" differs only in case from object "sum" in the same scope
+Info (10281): Verilog HDL Declaration information at BCD_adder_subtractor.v(5): object "Cout" differs only in case from object "cout" in the same scope
+Info (10281): Verilog HDL Declaration information at BCD_adder_subtractor.v(9): object "S1" differs only in case from object "s1" in the same scope
+Info (10281): Verilog HDL Declaration information at BCD_adder_subtractor.v(9): object "S2" differs only in case from object "s2" in the same scope

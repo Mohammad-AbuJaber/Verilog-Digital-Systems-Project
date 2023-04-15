@@ -1,0 +1,32 @@
+module BCD_adder_subtractor (A,B , Cin , SUM , Cout,sum,cout);
+input [3:0] A,B;
+input Cin;
+output [3:0] SUM ;
+output Cout;
+output [3:0] sum ;
+output cout;
+
+wire [3:0] S1,S2;
+wire C_out;
+wire [3:0] w;
+wire s1,s2;
+
+full_adder_subtractor(S1,C_out ,V,A,B,Cin);
+
+
+and (S2[0],S1[1],S1[3]);
+and (S2[1],S1[2],S2[3]);
+or (S2[2],S2[0],S2[1],C_out);
+and (w[1],'b1,S2[2]);
+and (w[2],'b1,S2[2]);
+
+
+full_adder_subtractor(SUM,Cout,V,S1,w,0);
+
+and (s1,SUM[3],SUM[1]);
+and (s2,SUM[2],SUM[3]);
+or (cout,Cout,s2,s1);
+
+xor (sum,{1'b0, cout, cout, 1'b0});
+
+endmodule 

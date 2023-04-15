@@ -1,0 +1,12 @@
+module min (input [3:0] A, 
+            input [3:0] B, 
+            output reg [3:0] out);
+  always @* begin
+    if (A<B)
+      out = A;
+    else if (A>B)
+      out = B;
+      else 
+      out = 0;
+  end
+endmodule 

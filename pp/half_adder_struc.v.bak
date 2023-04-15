@@ -1,0 +1,9 @@
+module half_adder_struc (a,b,sum,c_out,op);
+input a,b,op;
+output sum,c_out;
+
+xor(sum,a,b);
+and(c_out,a,b);
+
+
+endmodule 
